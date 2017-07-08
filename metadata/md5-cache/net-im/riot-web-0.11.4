@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=sys-devel/binutils net-libs/nodejs
+DESCRIPTION=A glossy Matrix collaboration client for the web
+EAPI=6
+HOMEPAGE=https://riot.im
+IUSE=-abi_x86_32 +abi_x86_64
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=sys-devel/binutils net-libs/nodejs
+REQUIRED_USE=abi_x86_32? ( !abi_x86_64 ) abi_x86_64? ( !abi_x86_32 )
+SLOT=0
+SRC_URI=https://github.com/vector-im/riot-web/archive/v0.11.4.tar.gz -> riot-web-0.11.4.tar.gz
+_eclass_exported_funcs=src_prepare:- src_compile:- src_install:-
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	9c113d6a64826c40154cad7be15d95ea	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	8fec6b1eb195836560e70b66d98fb163
+_md5_=f1f7420a3f41ee4a3265ca7d23439c48
