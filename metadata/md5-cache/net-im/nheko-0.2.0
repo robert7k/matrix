@@ -3,6 +3,7 @@ DEPEND=>=dev-qt/qtgui-5.7.1 >=dev-qt/qtnetwork-5.7.1 >=dev-qt/linguist-tools-5.7
 DESCRIPTION=Desktop client for the Matrix protocol
 EAPI=6
 HOMEPAGE=https://github.com/mujx/nheko
+KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 RDEPEND=>=dev-qt/qtgui-5.7.1 >=dev-qt/qtnetwork-5.7.1 >=dev-qt/linguist-tools-5.7.1 dev-qt/qtmultimedia media-libs/fontconfig dev-db/lmdb
 SLOT=0
