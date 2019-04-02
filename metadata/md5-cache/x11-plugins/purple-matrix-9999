@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile unpack
-DEPEND=net-im/pidgin dev-libs/glib dev-libs/json-glib net-libs/http-parser dev-db/sqlite:3 olm? ( dev-libs/olm dev-libs/libgcrypt:0 ) >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile prepare unpack
+DEPEND=dev-db/sqlite:3 dev-libs/glib dev-libs/json-glib net-im/pidgin net-libs/http-parser:= olm? ( dev-libs/libgcrypt:0= dev-libs/olm:= )
 DESCRIPTION=Libpurple protocol plugin for matrix
-EAPI=6
+EAPI=7
 HOMEPAGE=https://github.com/matrix-org/purple-matrix
 IUSE=olm
 LICENSE=GPL-2
-RDEPEND=net-im/pidgin dev-libs/glib dev-libs/json-glib net-libs/http-parser dev-db/sqlite:3 olm? ( dev-libs/olm dev-libs/libgcrypt:0 )
+RDEPEND=dev-db/sqlite:3 dev-libs/glib dev-libs/json-glib net-im/pidgin net-libs/http-parser:= olm? ( dev-libs/libgcrypt:0= dev-libs/olm:= )
 SLOT=0
-_eclasses_=git-r3	0d4635eeb5a96cd5315597a47eba25c9
-_md5_=3b30de1e325c1ed993d9e79fb87258c0
+_eclasses_=git-r3	0d4635eeb5a96cd5315597a47eba25c9	multilib	b2f01ad412baf81650c23fcf0975fa33	toolchain-funcs	b45201c4e6c096b98e250336954e64b9
+_md5_=b546973a5884c8de86c2635be8f112f2
