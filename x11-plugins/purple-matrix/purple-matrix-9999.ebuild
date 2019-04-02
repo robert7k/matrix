@@ -1,31 +1,46 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-inherit git-r3
+inherit toolchain-funcs
 
 DESCRIPTION="Libpurple protocol plugin for matrix"
 HOMEPAGE="https://github.com/matrix-org/purple-matrix"
-EGIT_REPO_URI="https://github.com/matrix-org/purple-matrix.git"
+if [[ "${PV}" ==  9999 ]] ; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/matrix-org/purple-matrix.git"
+else
+	SRC_URI="https://github.com/matrix-org/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
+fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
 IUSE="olm"
 
-RDEPEND="net-im/pidgin
+RDEPEND="
+	dev-db/sqlite:3
 	dev-libs/glib
 	dev-libs/json-glib
-	net-libs/http-parser
-	dev-db/sqlite:3
+	net-im/pidgin
+	net-libs/http-parser:=
 	olm? (
-		dev-libs/olm
-		dev-libs/libgcrypt:0
+		dev-libs/libgcrypt:0=
+		dev-libs/olm:=
 	)"
 DEPEND="${RDEPEND}"
 
+BDEPEND="
+	virtual/pkgconfig
+"
+
+src_prepare() {
+	default
+	sed '/^CFLAGS.*-O0/d' -i Makefile.common || die
+}
+
 src_compile() {
 	use olm || export MATRIX_NO_E2E=1
-	emake || die "Make failed!"
+	emake CC="$(tc-getCC)" PKG_CONFIG="$(tc-getBUILD_PKG_CONFIG)"
 }
