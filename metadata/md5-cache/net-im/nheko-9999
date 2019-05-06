@@ -1,0 +1,11 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl] dev-util/ninja >=dev-util/cmake-3.9.6
+DEFINED_PHASES=compile configure install postinst postrm prepare test unpack
+DEPEND=>=dev-qt/qtgui-5.7.1 >=dev-qt/qtnetwork-5.7.1 dev-qt/qtmultimedia dev-qt/qtsvg dev-qt/qtconcurrent dev-qt/qtwidgets media-libs/fontconfig app-text/cmark dev-libs/tweeny dev-db/lmdb++ >=dev-qt/linguist-tools-5.7.1 dev-util/ninja dev-libs/mtxclient
+DESCRIPTION=Desktop client for the Matrix protocol
+EAPI=7
+HOMEPAGE=https://github.com/Nheko-Reborn/nheko
+LICENSE=GPL-3
+RDEPEND=>=dev-qt/qtgui-5.7.1 >=dev-qt/qtnetwork-5.7.1 dev-qt/qtmultimedia dev-qt/qtsvg dev-qt/qtconcurrent dev-qt/qtwidgets media-libs/fontconfig app-text/cmark dev-libs/tweeny dev-db/lmdb++
+SLOT=0
+_eclasses_=cmake-utils	ab10bd85e5d38e2a32077bcd91faa1b6	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	git-r3	0d4635eeb5a96cd5315597a47eba25c9	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	b45201c4e6c096b98e250336954e64b9	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=3a365f2fbdbc50ce778e941bcaf4ccce
