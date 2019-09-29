@@ -1,10 +1,10 @@
 dev-libs/libQtOlm 9999: A Qt wrapper for libolm
 dev-libs/libQuotient 0.5.2 9999: A Qt5 library to write cross-platform clients for Matrix
-dev-libs/libhandy 0.0.10 9999: A library full of GTK+ widgets for mobile phones
 dev-libs/mtxclient 0.2.1 9999: An implementation of the Double Ratchet cryptographic ratchet in C++
 dev-libs/olm 3.1.3 9999: An implementation of the Double Ratchet cryptographic ratchet in C++
 dev-libs/sortfilterproxymodel 9999: A Qt5 library to write cross-platform clients for Matrix
 dev-libs/tweeny 3: A modern C++ tweening library
+gui-libs/libhandy 0.0.11: Library with GTK widgets for mobile phones
 net-im/fractal 4.2.0 9999: Matrix group messaging app
 net-im/nheko 0.6.4-r1 9999: Desktop client for the Matrix protocol
 net-im/quaternion 0.0.9.4c-r1 9999: An IM client for the Matrix protocol
