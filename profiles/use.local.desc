@@ -3,4 +3,5 @@
 # * generated automatically using pmaint *
 
 gui-libs/libhandy:glade - Install module and catalog for dev-util/glade
+net-im/riot-web:emoji - Use media-fonts/noto-emoji for displaying emoji
 x11-plugins/purple-matrix:olm - Support e2e-encrypted messaging using dev-libs/olm
