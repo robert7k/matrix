@@ -5,6 +5,7 @@ EAPI=7
 
 DESCRIPTION="Matrix group messaging app"
 HOMEPAGE="https://wiki.gnome.org/Apps/Fractal"
+RESTRICT="network-sandbox"
 
 inherit meson gnome2-utils xdg-utils
 
@@ -28,7 +29,7 @@ RDEPEND=">=virtual/rust-1.31.1
 	>=gui-libs/libhandy-0.0.10:0.0=
 	media-libs/gstreamer-editing-services
 	>=x11-libs/cairo-1.16.0
-	>=x11-libs/gtksourceview-3"
+	x11-libs/gtksourceview:3.0"
 DEPEND="${RDEPEND}"
 BDEPEND="dev-util/ninja
 	dev-util/meson"
